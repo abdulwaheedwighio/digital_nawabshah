@@ -1,0 +1,65 @@
+buildscript {
+    ext.kotlin_version = '1.9.22' // Still fine
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://storage.googleapis.com/download.flutter.io' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.2'  // Good
+        // REMOVE the flutter-gradle-plugin line below
+        // classpath 'io.flutter:flutter-gradle-plugin:1.0.0'
+    }
+}
+
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://storage.googleapis.com/download.flutter.io' } // Ensure Flutter packages are available
+    }
+}
+
+rootProject.buildDir = "../build"  // Set custom build directory
+
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.evaluationDependsOn(":app")  // Ensure app project is evaluated
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir  // Clean task to delete build directory
+}
+
+
+//buildscript {
+//    ext.kotlin_version = '1.9.22' // make sure it's latest
+//    repositories {
+//        google()
+//        mavenCentral()
+//    }
+//    dependencies {
+//        classpath 'com.android.tools.build:gradle:8.2.2'
+//    }
+//}
+//
+//
+//allprojects {
+//    repositories {
+//        google()
+//        mavenCentral()
+//    }
+//}
+//
+//rootProject.buildDir = "../build"
+//subprojects {
+//    project.buildDir = "${rootProject.buildDir}/${project.name}"
+//}
+//subprojects {
+//    project.evaluationDependsOn(":app")
+//}
+//
+//tasks.register("clean", Delete) {
+//    delete rootProject.buildDir
+//}

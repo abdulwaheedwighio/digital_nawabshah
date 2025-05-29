@@ -1,0 +1,6 @@
+const String drWaheedInfo = "Asst. Prof. Dr. Abdul Waheed - General Physician,NawabShah....Read more";
+const String forgetPasswordText = "On’t worry, If just forgot your password if this account belonged to you";
+const String sendEmailText = "Please Enter your Email so we can send code on number or email..";
+const String verifyByEmail = "Please Enter the verification code sent to your Provided Email";
+const String aboutDoctorText = 'My name is Muhammad Umair Raza Various educators teach rules governing the length of paragraphs. They may say that a paragraph should be 100 to 200 words long, or be no more than five or six sentences. But a good paragraph should not be measured in characters, words, or sentences. The true measure of your paragraphs should be ideas.Various educators teach rules governing the length of paragraphs. They may say that a paragraph should be 100 to 200 words long, or be no more than five or sixVarious educators teach rules governing the length of paragraphs. They may say that a paragraph should be 100 to 200 words long, or be no more than five or six length of paragraphs. They may say that a paragraph should be 100 to 200 words long, or be no more than five or six ';
+const String verifyDoctorBySTS = "This Doctor is Verified by Sindh Tech Solution for achieving 10+ positive reviews from User.";
